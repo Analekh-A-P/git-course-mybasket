@@ -3,15 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>My Basket</title>
-</head>
-<body>
-    
-    <div class="container">
-        <h1>Welcome to the basket project</h1>
-    </div>
+    <title>MyBasket</title>
 
-    <script src="js/script.js"></script>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-100">
+
+<!-- 🔹 Navbar -->
+<header class="bg-green-600 text-white p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">MyBasket</h1>
+
+    <nav class="space-x-6 hidden md:block">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Offers</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <button id="cartBtn" class="bg-white text-green-600 px-4 py-1 rounded">
+        Cart 🛒
+    </button>
+</header>
+
+<!-- 🔹 Hero Section -->
+<section class="bg-green-100 p-10 text-center">
+    <h2 class="text-4xl font-bold mb-4">Fresh Groceries Delivered</h2>
+    <p class="mb-6">Shop fresh fruits, vegetables & daily essentials</p>
+    <button class="bg-green-600 text-white px-6 py-2 rounded">
+        Shop Now
+    </button>
+</section>
+
+<!-- 🔹 Categories -->
+<section class="p-8">
+    <h2 class="text-2xl font-bold mb-4">Categories</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="card">Fruits</div>
+        <div class="card">Vegetables</div>
+        <div class="card">Dairy</div>
+        <div class="card">Snacks</div>
+    </div>
+</section>
+
+<!-- 🔹 Featured Products -->
+<section class="p-8 bg-white">
+    <h2 class="text-2xl font-bold mb-4">Featured Products</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="product">
+            <img src="https://via.placeholder.com/150" />
+            <h3>Apple</h3>
+            <p>₹120/kg</p>
+            <button onclick="addToCart('Apple')">Add</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" />
+            <h3>Milk</h3>
+            <p>₹50</p>
+            <button onclick="addToCart('Milk')">Add</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" />
+            <h3>Bread</h3>
+            <p>₹40</p>
+            <button onclick="addToCart('Bread')">Add</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" />
+            <h3>Banana</h3>
+            <p>₹60/dozen</p>
+            <button onclick="addToCart('Banana')">Add</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- 🔹 Offers -->
+<section class="p-8 bg-yellow-100 text-center">
+    <h2 class="text-2xl font-bold mb-2">Special Offer 🎉</h2>
+    <p>Get 20% OFF on first order</p>
+</section>
+
+<!-- 🔹 Footer -->
+<footer class="bg-gray-800 text-white text-center p-4">
+    <p>© 2026 MyBasket | All Rights Reserved</p>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+
 </body>
 </html>

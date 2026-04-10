@@ -1,10 +1,36 @@
-body{
-    padding: 0;
-    margin: 0;;
-    background-color: black;
+/* Category Cards */
+.card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: #16a34a;
     color: white;
 }
-.container{
-    padding: 100px;
+
+/* Product Card */
+.product {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
+}
+
+.product img {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.product button {
+    margin-top: 10px;
+    background: #16a34a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
